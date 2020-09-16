@@ -1,6 +1,7 @@
 package com.kykangyu.system.controller;
 
 
+import com.kykangyu.response.Result;
 import com.kykangyu.system.entity.TbUser;
 import com.kykangyu.system.service.impl.TbUserService;
 import io.swagger.annotations.Api;
@@ -27,11 +28,12 @@ import java.util.List;
 public class TbUserController {
     @Autowired
     private TbUserService tbUserService;
+
     @GetMapping
     @ApiOperation(value = "查询所有的用户信息",notes = "")
-    public List<TbUser> findUsers(){
+    public Result findUsers(){
         List<TbUser> list = tbUserService.list();
-        return list;
+        return Result.ok().data("users",list);
     }
 }
 
