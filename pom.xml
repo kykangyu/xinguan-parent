@@ -29,6 +29,8 @@
         <velocity.version>2.2</velocity.version>
         <!--mysql-->
         <mysql.sersion>8.0.13</mysql.sersion>
+        <!--knife4j版本-->
+        <knife4j.sersion>2.0.4</knife4j.sersion>
     </properties>
 
     <dependencyManagement>
@@ -67,6 +69,13 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId>
                 <version>${mp.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <!--在引用时请在maven中央仓库搜索最新版本号-->
+                <version>${knife4j.sersion}</version>
             </dependency>
         </dependencies>
 
